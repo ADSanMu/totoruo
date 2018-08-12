@@ -1,3 +1,5 @@
+
+
 JsonObject jsonObj = ApiOperator 
 						.get("/ssmp/endeca/search")//返回一个RequestEntityBuilder
 						.dynamicVersion()
@@ -171,3 +173,17 @@ class ErrorApiResponseHolder extends ApiResponseHolder{
 public class ApiException extends RuntimeException{
 
 }
+
+
+上面的都只以接口的形式暴露出来，不把实际的实现类暴露出来，用户只需要知道ApiOperator这个类够了。
+大概需要的接口有：RequestEntityBuilder 和 ApiResonseProcessor，然后把默认的实现类都隐藏起来。
+
+
+
+
+
+
+
+
+
+
