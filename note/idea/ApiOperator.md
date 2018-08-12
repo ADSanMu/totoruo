@@ -142,7 +142,7 @@ class RequestEntity{
 }
 
 
-public interface ApiResonseProcessor{
+public interface ApiResponseProcessor{
 
 	ApiResonseProcessor isOk(String errorMsg);
 	
@@ -160,7 +160,7 @@ public interface ApiResonseProcessor{
 
 
 
-abstract class ApiResponseHolder implements ApiResonseProcessor{
+abstract class ApiResponseHolder implements ApiResponseProcessor{
 
 	RequestEntity requestEnity;
 
