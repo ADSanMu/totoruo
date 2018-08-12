@@ -95,9 +95,9 @@ interface ApiResonseProcessor{
 	
 	ApiResonseProcessor noError(String errorMsg);
 
-	JsonObject toJsonObj();
+	JsonObject jsonObj();
 
-	JsonArray toJsonArray();
+	JsonArray jsonArray();
 
 	void response();
 
