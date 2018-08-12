@@ -52,56 +52,113 @@ ApiOperator.post("/blog/login").param("username","mockname").param("password","x
 
 public final class ApiOperator{
 
-	RequestEntityBuilder get(String url);
+	RequestEntityBuilder get(String apiPath){
+		return new RequestEntityBuilder(new HttpGet(apiPath));
+	}
 
-	RequestEntityBuilder post(String url);
+	RequestEntityBuilder post(String apiPath){
+		return new RequestEntityBuilder(new HttpPost(apiPath));
+	}
 
-	RequestEntityBuilder dynamic();
+	RequestEntityBuilder dynamic(){
+		//get current method 
+	}
 
 	RequestStat stat();
 
-}
+	class RequestStat{
 
-class RequestStat{
+		class RequestRecord{
 
-	class RequestRecord{
-
+		}
 	}
-}
-
-interface RequestEntityBuilder{
-
-	RequestEntityBuilder dynamicVersion();
-
-	RequestEntityBuilder param(String name,Object value);//value 是直接toString();
-
-	RequestEntityBuilder header(String name,String... value);
-
-	RequestEntityBuilder cookie(String name,String value);
-
-	RequestEntityBuilder all();
-
-	RequestEntityBuilder consumer(Consumer<ApiResponseHolder>... consumers);
-
-	RequestEntityBuilder ifNotOk(Object object);
-
-	ApiResonseProcessor request();
 
 }
 
-interface ApiResonseProcessor{
+
+
+public class RequestEntityBuilder{
+
+	private RequestEntity requestEnity;
+
+	RequestEntityBuilder(HttpRequestBase httpBaseRequest)｛
+		this.requestEnity = new RequestEntity(httpBaseRequest);
+	｝
+
+	public RequestEntityBuilder dynamicVersion();
+
+	public RequestEntityBuilder param(String name,Object value);//value 是直接toString();
+
+	public RequestEntityBuilder header(String name,String... value);
+
+	public RequestEntityBuilder cookie(String name,String value);
+
+	public RequestEntityBuilder all();
+
+	public RequestEntityBuilder consumer(Consumer<ApiResponseHolder>... consumers);
+
+	public RequestEntityBuilder ifNotOk(Object object);
+
+	public ApiResonseProcessor request(){
+    	return ApiResponseHolderBuilder.newApiResponseHolder(this.requestEnity.completeApiPath());
+	}
+
+}
+
+class ApiResponseHolderBuilder{
+
+	private static ApiResonseProcessor newApiResponseHolder(RequestEntity requestEnity){
+		ApiResonseProcessor apiResponseHolder;
+		try(CloseableClientHttpResponse response = requestEnity.request();){
+			apiResponseHolder = this.extract(response);
+		}catch(Throwable t){
+			apiResponseHolder = new ErrorApiResponseHolder(t);
+		}
+		return apiResponseHolder;
+	}
+
+	private static ApiResponseHolder extract(CloseableClientHttpResponse response){
+		//获取response status来决定返回的是OkApiResponseHolder/DefaultResponseHolde 并且把相应的内容填充到实体类中
+	}
+
+}
+
+class RequestEntity{
+
+	private List<ParamPair> params;
+
+	private HttpBaseRequest httpBaseRequest;
+
+	private List<Consumer<ApiResponseHolder>> consumers;
+
+	private	Object alternative;
+
+	RequestEntity(HttpBaseRequest httpBaseRequest);
+
+	RequestEntity completeApiPath();
+
+	CloseableClientHttpResponse	request(){}
+
+}
+
+
+public interface ApiResonseProcessor{
 
 	ApiResonseProcessor isOk(String errorMsg);
 	
 	ApiResonseProcessor noError(String errorMsg);
 
-	JsonObject jsonObj();
+	JsonObject toJsonObj();
 
-	JsonArray jsonArray();
+	JsonArray toJsonArray();
+
+	<T>T toBean(Class<T> beanType);
 
 	void response();
 
 }
+
+
 
 abstract class ApiResponseHolder implements ApiResonseProcessor{
 
@@ -111,44 +168,21 @@ abstract class ApiResponseHolder implements ApiResonseProcessor{
 
 	MediaType mediaType;
 
-	String responseContent;
+	Object response;
 
 	MultiValueMap headers;
 
 	List<Cookie> cookies;
 
-	Object alternative;
-
-	List<Consumer<ApiResponseHolder>> consumers;
-
-
-	ApiResonseProcessor newApiResponseHolder(RequestEntity requestEnity){
-		this.requestEnity = requestEnity;
-		return this.initApiResponseHolder();
-	}
-
-	ApiResonseProcessor initApiResponseHolder(){
-
-		ApiResonseProcessor apiResponseHolder;
-
-		try(CloseableClientHttpResponse response = this.requestEnity.request();){
-
-		}catch(Throwable t){
-			apiResponseHolder= new ErrorApiResponseHolder(t);
+	ApiResponseHolder(){
+		(Comsumer<ApiResponseHolder> consumer:this.requestEnity.getConsumers()){
+			consumer.accept(this);
 		}
-		this.doConsumers(apiResponseHolder);
-		return apiResponseHolder;
 	}
 
-	private ApiResponseHolder extract(CloseableClientHttpResponse response){
-		//获取response status来决定返回的是OkApiResponseHolder/DefaultResponseHolde
-	}
+	String parseMsg(String msg)｛
 
-	private void doConsumers(ApiResponseHolder apiResponseHolder){
-
-	}
-
-	String parseMsg(String msg);//解析isOk("${apiPath}")等特定的字符
+	｝//解析isOk("${apiPath}")等特定的字符
 
 
 }
@@ -174,6 +208,9 @@ public class ApiException extends RuntimeException{
 
 }
 
+
+ApiOperator.get("/ssmp/endeca/search").dynamicVersion().param("keyword","australia").request().toJsonObj();
+ApiOperator.dynamic().dynamicVersion().all().request().isOk("Request api failed with apiPath = '${apiPath}' please check").response();
 
 上面的都只以接口的形式暴露出来，不把实际的实现类暴露出来，用户只需要知道ApiOperator这个类够了。
 大概需要的接口有：RequestEntityBuilder 和 ApiResonseProcessor，然后把默认的实现类都隐藏起来。
