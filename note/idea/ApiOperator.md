@@ -216,11 +216,15 @@ ApiOperator.dynamic().dynamicVersion().all().request().isOk("Request api failed 
 大概需要的接口有：RequestEntityBuilder 和 ApiResonseProcessor，然后把默认的实现类都隐藏起来。
 
 
+############################################################################################
+* RequestEntityBuilder 里面增加方法：getParams()
 
+* ApiContext 维护一个RequestBuilder(Apache) 对象 修改RequestEntity中的重复的地方，使用apache已实现的
 
+* RequestEntity 里面只有apiContext, 方法包含了执行当前请求， 且包含了提供当前请求的所有信息
 
+* consumer改成一个参数是apiContext，现在分成了两个
 
+* 实现一个CookieStore 继承BasicCookieStore，去除掉过期的cookie和上次请求携带的cookie(没有改变的) 重写getCookies方法
 
-
-
-
+* 清除掉在远程服务器返回的header中不需要的header(Set-Cookie(cookies放在cookieStore里面来写回到页面),Content-Length,Date,Content-Type(该属性去掉由aem response), wso2's headers)
