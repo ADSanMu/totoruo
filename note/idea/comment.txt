@@ -1,1 +1,24 @@
 http://139.199.89.239:1008/88414687-3b91-4286-89ba-2dc813b107ce
+
+
+
+查看Centos端口命令：
+# netstat -lntp #查看监听(Listen)的端口
+# netstat -antp #查看所有建立的TCP连接
+
+
+开放Centos端口命令(使用了firewall防火墙) 
+ 
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+ 
+命令含义：
+ 
+--zone #作用域
+ 
+--add-port=80/tcp  #添加端口，格式为：端口/通讯协议
+ 
+--permanent   #永久生效，没有此参数重启后失效
+ 
+重启防火墙
+ 
+firewall-cmd --reload
