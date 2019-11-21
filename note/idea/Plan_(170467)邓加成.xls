@@ -1,0 +1,351 @@
+<meta http-equiv=Content-Type content=text/html;charset=GB2312><div id="ctl00_cphContract_divExport" style="float: left; width: 100%">
+                                <div>
+	<table class="dataTablePlan" cellspacing="0" rules="all" border="1" id="ctl00_cphContract_gvPlanDetail" style="border-color:Black;border-width:1px;border-style:solid;width:100%;border-collapse:collapse;">
+		<tr>
+			<th align="center" scope="col" style="background-color:#FFFF99;">ID(编号)</th><th align="center" scope="col" style="background-color:#FFFF99;">Key Goal/ Task Description<br/>(关键业绩指标描述)</th><th align="center" scope="col" style="background-color:#FFFF99;width:80px;">Expected Time<br/>(预计时间)</th><th align="center" scope="col" style="background-color:#FFFF99;width:100px;">Deliverables<br/>(提交物)</th><th align="center" scope="col" style="background-color:#FFFF99;width:50px;">Proportion<br/>(权重%)</th><th align="center" scope="col" style="background-color:#FFFF99;width:100px;">Self Comments<br/>(自评意见)</th><th align="center" scope="col" style="background-color:#FFFF99;">Self Evaluation<br/>(自评分数)</th>
+		</tr><tr style="background-color:#C0C0C0;">
+			<td align="center" style="width:80px;white-space:nowrap;">Goal 1</td><td onclick="findTarget(this)" style="width:300px;">
+                                                Continue to support on-going sprints
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:80px;">
+                                                2019-12-31
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:100px;">
+                                                
+                                                
+                                            </td><td onclick="findTarget(this)" rowspan="4" style="background-color:#C0C0C0;width:50px;">
+                                                
+                                                20
+                                                %
+                                            </td><td>
+                                                qualified
+                                            </td><td align="center" valign="middle" rowspan="4" style="width:50px;">
+                                                4.0
+                                            </td>
+		</tr><tr style="background-color:#CCFFFF;">
+			<td align="center" style="width:80px;white-space:nowrap;">Task 1.1</td><td onclick="findTarget(this)" style="width:300px;">
+                                                Support BAU and blog sprints
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:80px;">
+                                                
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:100px;">
+                                                
+                                                
+                                            </td><td>
+                                                
+                                            </td>
+		</tr><tr>
+			<td align="center" style="width:80px;white-space:nowrap;">1</td><td onclick="findTarget(this)" style="width:300px;">
+                                                Provide deployment for different initiatives
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:80px;">
+                                                
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:100px;">
+                                                
+                                                
+                                            </td><td>
+                                                
+                                            </td>
+		</tr><tr>
+			<td align="center" style="width:80px;white-space:nowrap;">2</td><td onclick="findTarget(this)" style="width:300px;">
+                                                Secure our code and tools by Veracode and Sonar scan
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:80px;">
+                                                
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:100px;">
+                                                
+                                                
+                                            </td><td>
+                                                
+                                            </td>
+		</tr><tr style="background-color:#C0C0C0;">
+			<td align="center" style="width:80px;white-space:nowrap;">Goal 2</td><td onclick="findTarget(this)" style="width:300px;">
+                                                Support Marketing Digital Transformation(SSMP) and other high priorities
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:80px;">
+                                                2019-12-31
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:100px;">
+                                                
+                                                
+                                            </td><td onclick="findTarget(this)" rowspan="3" style="background-color:#C0C0C0;width:50px;">
+                                                
+                                                16
+                                                %
+                                            </td><td>
+                                                good
+                                            </td><td align="center" valign="middle" rowspan="3" style="width:50px;">
+                                                4.5
+                                            </td>
+		</tr><tr style="background-color:#CCFFFF;">
+			<td align="center" style="width:80px;white-space:nowrap;">Task 2.1</td><td onclick="findTarget(this)" style="width:300px;">
+                                                Migrate to SSMP for APAC,NA and EMEA
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:80px;">
+                                                
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:100px;">
+                                                
+                                                
+                                            </td><td>
+                                                
+                                            </td>
+		</tr><tr>
+			<td align="center" style="width:80px;white-space:nowrap;">1</td><td onclick="findTarget(this)" style="width:300px;">
+                                                Support MDY Program
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:80px;">
+                                                
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:100px;">
+                                                
+                                                
+                                            </td><td>
+                                                
+                                            </td>
+		</tr><tr style="background-color:#C0C0C0;">
+			<td align="center" style="width:80px;white-space:nowrap;">Goal 3</td><td onclick="findTarget(this)" style="width:300px;">
+                                                Continue to make Business Continuity and Risk Excellence an integral part of day-to-day responsibilities
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:80px;">
+                                                2019-12-31
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:100px;">
+                                                
+                                                
+                                            </td><td onclick="findTarget(this)" rowspan="3" style="background-color:#C0C0C0;width:50px;">
+                                                
+                                                14
+                                                %
+                                            </td><td>
+                                                good
+                                            </td><td align="center" valign="middle" rowspan="3" style="width:50px;">
+                                                4.5
+                                            </td>
+		</tr><tr style="background-color:#CCFFFF;">
+			<td align="center" style="width:80px;white-space:nowrap;">Task 3.1</td><td onclick="findTarget(this)" style="width:300px;">
+                                                 Actively encourage participation in Global Inclusion activities
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:80px;">
+                                                
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:100px;">
+                                                
+                                                
+                                            </td><td>
+                                                
+                                            </td>
+		</tr><tr>
+			<td align="center" style="width:80px;white-space:nowrap;">1</td><td onclick="findTarget(this)" style="width:300px;">
+                                                Strengthen and advance Digital Marketing platforms and architectures(CDN,AEM ,DATA API etc), include integrating MarTech stack(Marketo, Transperfect etc)
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:80px;">
+                                                
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:100px;">
+                                                
+                                                
+                                            </td><td>
+                                                
+                                            </td>
+		</tr><tr style="background-color:#FFFF99;">
+			<td onclick="findTarget(this)" colspan="2" style="width:300px;text-align:center;font-weight:bold;">
+                                                Personal Development(个人发展)
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:80px;">
+                                                2019-12-31
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:100px;">
+                                                
+                                                
+                                            </td><td onclick="findTarget(this)" rowspan="7" style="background-color:#C0C0C0;width:50px;">
+                                                
+                                                10
+                                                %
+                                            </td><td>
+                                                qualified
+                                            </td><td align="center" valign="middle" rowspan="7" style="background-color:#C0C0C0;width:50px;">
+                                                4.0
+                                            </td>
+		</tr><tr style="background-color:#CCFFFF;">
+			<td align="center" style="width:80px;white-space:nowrap;">Task 4.1</td><td onclick="findTarget(this)" style="width:300px;">
+                                                Enhance fundamental knowledge
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:80px;">
+                                                
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:100px;">
+                                                
+                                                
+                                            </td><td>
+                                                
+                                            </td>
+		</tr><tr>
+			<td align="center" style="width:80px;white-space:nowrap;">1</td><td onclick="findTarget(this)" style="width:300px;">
+                                                AEM development,OSGI Framework,Sling Framework,JCR
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:80px;">
+                                                
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:100px;">
+                                                
+                                                
+                                            </td><td>
+                                                
+                                            </td>
+		</tr><tr style="background-color:#CCFFFF;">
+			<td align="center" style="width:80px;white-space:nowrap;">Task 4.2</td><td onclick="findTarget(this)" style="width:300px;">
+                                                AEM Learning
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:80px;">
+                                                
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:100px;">
+                                                
+                                                
+                                            </td><td>
+                                                
+                                            </td>
+		</tr><tr>
+			<td align="center" style="width:80px;white-space:nowrap;">1</td><td onclick="findTarget(this)" style="width:300px;">
+                                                Dam management
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:80px;">
+                                                
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:100px;">
+                                                
+                                                
+                                            </td><td>
+                                                
+                                            </td>
+		</tr><tr style="background-color:#CCFFFF;">
+			<td align="center" style="width:80px;white-space:nowrap;">Task 4.3</td><td onclick="findTarget(this)" style="width:300px;">
+                                                Improve English ability
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:80px;">
+                                                
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:100px;">
+                                                
+                                                
+                                            </td><td>
+                                                
+                                            </td>
+		</tr><tr>
+			<td align="center" style="width:80px;white-space:nowrap;">1</td><td onclick="findTarget(this)" style="width:300px;">
+                                                Speaking Writing and Reading Skills…
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:80px;">
+                                                
+                                                
+                                            </td><td onclick="findTarget(this)" style="width:100px;">
+                                                
+                                                
+                                            </td><td>
+                                                
+                                            </td>
+		</tr>
+	</table>
+</div>
+                                <div id="ctl00_cphContract_plProQuatilies">
+	
+                                    <table style="width: 100%; border-collapse: collapse; border-color: #000; border-top: 0px;"
+                                        border="1">
+                                        <tbody>
+                                            <tr style="background-color: #ff9; font-family: Arial;">
+                                                <th id="ctl00_cphContract_Th1" style="text-align: center; border: 1px black solid; border-top: 0px;
+                                                    font-family: Arial;" colspan="4">
+                                                    Professionalism Criteria(职业素养指标)
+                                                </th>
+	
+                                                
+                                                <th width="44px" style="text-align: center; border: 1px black solid; border-top: 0px;
+                                                    font-family: Arial;">
+                                                    40%
+                                                </th>
+                                                <th id="ctl00_cphContract_aaa" width="40px" style="text-align: center; border: 1px black solid;
+                                                    font-family: Arial; border-top: 0px;" colspan="2">
+                                                    Self Evaluation(自评)
+                                                </th>
+	
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center; border: 1px black solid; border-top: 0px; width: 200px;
+                                                    font-family: Arial;">
+                                                    Professional Dedication(敬业)
+                                                </td>
+                                                <td style="border: 1px black solid; border-top: 0px; width: 320px;" colspan="3">
+                                                    
+                                                    
+                                                </td>
+                                                <td style="text-align: center; border: 1px black solid; border-top: 0px; width: 44px;">
+                                                    10%
+                                                </td>
+                                                <td id="ctl00_cphContract_aaa1" style="text-align: center; border: 1px black solid; border-top: 0px;" colspan="2">
+                                                    4.0
+                                                </td>
+	
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center; border: 1px black solid; border-top: 0px;">
+                                                    Teamwork(团队合作)
+                                                </td>
+                                                <td style="border: 1px black solid; border-top: 0px;" colspan="3">
+                                                    
+                                                    
+                                                </td>
+                                                <td style="text-align: center; border: 1px black solid; border-top: 0px;">
+                                                    10%
+                                                </td>
+                                                <td id="ctl00_cphContract_aaa2" style="text-align: center; border: 1px black solid; border-top: 0px;" colspan="2">
+                                                    4.0
+                                                </td>
+	
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center; border: 1px black solid; border-top: 0px;">
+                                                    Service Consciousness(服务意识)
+                                                </td>
+                                                <td style="border: 1px black solid; border-top: 0px;" colspan="3">
+                                                    
+                                                    
+                                                </td>
+                                                <td style="text-align: center; border: 1px black solid; border-top: 0px;">
+                                                    10%
+                                                </td>
+                                                <td id="ctl00_cphContract_aaa3" style="text-align: center; border: 1px black solid; border-top: 0px;" colspan="2">
+                                                    4.0
+                                                </td>
+	
+                                                
+                                            </tr>
+                                            <tr>
+                                                <td style="text-align: center; border: 1px black solid; border-top: 0px;">
+                                                    Embracing Change(拥抱变化)
+                                                </td>
+                                                <td style="border: 1px black solid; border-top: 0px;" colspan="3">
+                                                    
+                                                    
+                                                </td>
+                                                <td style="text-align: center; border: 1px black solid; border-top: 0px;">
+                                                    10%
+                                                </td>
+                                                <td id="ctl00_cphContract_aaa4" style="text-align: center; border: 1px black solid; border-top: 0px;" colspan="2">
+                                                    4.0
+                                                </td>
+	
+                                                
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    
+                                
+</div>
+                            </div>
